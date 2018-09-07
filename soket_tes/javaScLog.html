@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+  	//テキストの読み込み
+  	//$("#txtLoad").load("DATA/sample.txt")
+  	$("#load").toggle(
+  		function(){
+  			//リンクをクリックするとsample.txtが読み込まれ、リセット用のリンクテキストが表示されます
+  			$(this).text("リセット")
+  			$("#txtLoad").load("sample.txt")
+  			},
+  		function(){
+  			//リセット用のテキストがクリックされた後の処理になります
+  			$(this).text("読み込む")
+  			$("#txtLoad").text("読み込んでいません")
+  	});
+  });
+  $("#load").toggle(
+  		function(){
+  			//リンクをクリックするとsample.txtが読み込まれ、リセット用のリンクテキストが表示されます
+  			$(this).text("リセット")
+  			$("#txtLoad").load("sample.txt")
+  			},
+  		function(){
+  			//リセット用のテキストがクリックされた後の処理になります
+  			$(this).text("読み込む")
+  			$("#txtLoad").text("読み込んでいません")
+  	});
+  });
+  </script>
+</head>
+<body>
+
+<h2>load</h2>
+<p>外部ファイルのテキストデータをそのままタグに置き換える</p>
+<!-- javascript:void(0)：リンク表示、アクションは起こさない -->
+<div><a id="load" href="javascript:void(0)">読み込み</a></div>
+<div id="txtLoad">データ</div>
+
+<br />
+
+<p>外部ファイルのHTMLデータをそのままタグに置き換える</p>
+<a id="load2" href="javascript:void(0)">読み込み(HTML)</a>
+<div id="htmlLoad" >データ(HTML)</div>
+
+<br />
+
+<h2>get/post</h2>
+<p>getまたはpostで外部データを取得して変数を格納</p>
+<div id="getLoad">読み込んでいません（get）</div>
+
+<br />
+
+<h2>JSON</h2>
+<p>JSON形式のデータを取得して変数に格納</p>
+<div id="jsonLoad">読み込んでいません（JSON）</div>
+</body>
+</html>
