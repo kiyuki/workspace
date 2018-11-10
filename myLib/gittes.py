@@ -3,3 +3,6 @@ def test():
 
 def test0():
     pass
+
+def test1():
+    pass
