@@ -63,6 +63,11 @@ print(a[0], a[1])
 print(type(a[0]), type(a[1]))
 print("Produ, type(a)", a, type(a))
 """
+"""
 temp = map(int, input().strip().split())
 print("Type of temp, temp",type(temp), list(temp))
+"""
+
+for i in range(10, 20):
+    print(i)
 
